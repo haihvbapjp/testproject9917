@@ -554,5 +554,6 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         let imageWidth = CGFloat(CVPixelBufferGetWidth(imageBuffer))
         let imageHeight = CGFloat(CVPixelBufferGetHeight(imageBuffer))
         detectFacesOnDevice(in: visionImage, width: imageWidth, height: imageHeight)
+        print("testing zxc 456")
     }
 }
