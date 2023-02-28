@@ -554,18 +554,5 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         let imageWidth = CGFloat(CVPixelBufferGetWidth(imageBuffer))
         let imageHeight = CGFloat(CVPixelBufferGetHeight(imageBuffer))
         detectFacesOnDevice(in: visionImage, width: imageWidth, height: imageHeight)
-        print("testing zxc 123")
-    }
-}
-
-enum ApproveStatus: String, Codable, CaseIterable {
-    case impossible = "IMPOSSIBLE"
-    case approved = "APPROVED"
-    case denial = "DENIAL"
-    case unapproved  = "UNAPPROVED"
-
-    static func toURLParam(_ statuses: [ApproveStatus]) -> String {
-        let result = statuses.map({ $0.rawValue }).joined(separator: ",")
-        return result
     }
 }
